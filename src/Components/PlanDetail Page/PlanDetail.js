@@ -12,12 +12,12 @@ function PlanDetail() {
     const [rate, setrate] = useState();
     const { user } = useAuth();
     useEffect(async () => {
-        const data = await axios.get(`https://food-app-backend101.herokuapp.com/api/v1/plan/${id}`)
+        const data = await axios.get(`https://food-back21.herokuapp.com/api/v1/plan/${id}`)
         console.log(data.data.data);
         delete data.data.data["_id"]
         delete data.data.data["__v"]
         setplan(data.data.data)
-        const reviews = await axios.get("https://food-app-backend101.herokuapp.com/api/getReview/" + id);
+        const reviews = await axios.get("https://food-back21.herokuapp.com/api/getReview/" + id);
         setarr(reviews.data.reviews)
         console.log(arr);
     }, [])
