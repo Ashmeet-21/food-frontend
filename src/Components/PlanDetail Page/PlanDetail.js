@@ -27,18 +27,18 @@ function PlanDetail() {
     }
     const handleClick = async () => {
         console.log(123645);
-        const data = await axios.post("https://food-app-backend101.herokuapp.com/api/reviews", {
+        const data = await axios.post("https://food-back21.herokuapp.com/api/reviews", {
             "review": review,
             "rating": rate,
             "user": user.user._id,
             "plan": id
         })
-        const reviews = await axios.get("https://food-app-backend101.herokuapp.com/api/getReview/" + id);
+        const reviews = await axios.get("https://food-back21.herokuapp.com/api/getReview/" + id);
         setarr(reviews.data.reviews);
     }
     const handleDelete = async () => {
         try {
-            let data = await axios.delete("https://food-app-backend101.herokuapp.com/", {
+            let data = await axios.delete("https://food-back21.herokuapp.com/", {
                 "id": id
             });
             alert(data);
