@@ -27,7 +27,7 @@ function PlanDetail() {
     }
     const handleClick = async () => {
         console.log(123645);
-        const data = await axios.post("https://food-back21.herokuapp.com/api/reviews/", {
+        const data = await axios.post("https://food-back21.herokuapp.com/api/reviews", {
             "review": review,
             "rating": rate,
             "user": user.user._id,
