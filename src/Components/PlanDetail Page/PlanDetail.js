@@ -6,7 +6,7 @@ import '../Styles/contact.css';
 import AuthProvider, { useAuth } from '../Context/AuthProvider';
 function PlanDetail() {
     const [plan, setplan] = useState({})
-    const { id } = useParams();
+    const {id} = useParams();
     const [arr, setarr] = useState();
     const [review, setreview] = useState("");
     const [rate, setrate] = useState();
