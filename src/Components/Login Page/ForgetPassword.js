@@ -10,7 +10,7 @@ function ForgetPassword() {
     const sendEmail = async () => {
         // request -> forgetPassword Route
         try {
-            let res = await axios.patch("https://food-back21.herokuapp.com/api/v1/auth/forgetPassword", { email });
+            let res = await axios.patch("https://back-fwzg.onrender.com/api/v1/auth/forgetPassword", { email });
 
             alert("Mail send to your registerd email ID");
             setResetEmail(email);

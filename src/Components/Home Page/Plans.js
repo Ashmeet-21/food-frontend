@@ -9,7 +9,7 @@ function Plans() {
 
     useEffect(async () => {
         try {
-            const data = await axios.get("https://food-back21.herokuapp.com/api/gettop3");
+            const data = await axios.get("https://back-fwzg.onrender.com/api/gettop3");
             arrset(data.data.data);
             console.log(data.data);
         } catch (err) {

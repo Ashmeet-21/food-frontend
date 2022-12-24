@@ -5,7 +5,7 @@ module.exports = function (app) {
     app.use("/api",
         createProxyMiddleware({
             // server ke home page ka link
-            target: 'https://food-back21.herokuapp.com',
+            target: 'https://back-fwzg.onrender.com',
             changeOrigin: true,
         })
     );
